@@ -1,158 +1,158 @@
 /* GLobal Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-  }
-  
-  .d-flex {
-    display: flex;
-  }
-  
-  .btn {
-    outline: none;
-    border: none;
-    background-color: aliceblue;
-    cursor: pointer;
-    padding: 1rem;
-    border-radius: 1px;
-    transition: all 0.3s ease-in-out;
-  }
-  select {
-    appearance: none;
-    outline: black;
-    background-color: aliceblue;
-    padding: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 2rem;
-    margin-right: 0.3rem;
-    cursor: pointer;
-    color: #0E141B;
-    border-color: black;
-  }
-  
-  .mcenter{
-    margin: 1rem auto;
-  }
-  .mb {
-    margin-bottom: 1rem;
-  }
-  
-  /* End GLobal Styles */
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: aliceblue;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 1px;
+  transition: all 0.3s ease-in-out;
+}
+select {
+  appearance: none;
+  outline: black;
+  background-color: aliceblue;
+  padding: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  margin-right: 0.3rem;
+  cursor: pointer;
+  color: #0e141b;
+  border-color: black;
+}
+
+.mcenter {
+  margin: 1rem auto;
+}
+.mb {
+  margin-bottom: 1rem;
+}
+
+/* End GLobal Styles */
+
+.main-container {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.clock-container {
+  padding: 2rem;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.current-time {
+  font-size: 2rem;
+  color: black;
+}
+
+.alarm-form {
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+
+.submit-button {
+  border-color: black;
+  border: 10px;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.set-alarm-container {
+  width: 100%;
+  background-color: aliceblue;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.set-alarm-container .set-alarm-container-title {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.alarm {
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  background-color: #ddecf9;
+}
+.alarm .delete-alarm {
+  border-radius: 0.5rem;
+  background-color: #f14949ea;
+  font-weight: bold;
+  color: wheat;
+  font-size: xx-medium;
+}
+
+.delete-alarm:hover {
+  background-color: red;
+  color: white;
+}
+.time {
+  color: #0e141b;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#hours:hover,
+#minutes:hover,
+#seconds:hover,
+#am-pm:hover,
+.submit-button:hover {
+  background-color: #ddecf9;
+}
+
+.page-title {
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+
+/* style of devices of screen size less than 768px */
+@media only screen and (min-width: 600px) {
+  /* adding padding to container */
   .main-container {
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
+    padding-block: 2rem;
   }
-  
   .clock-container {
-    padding: 2rem;
-    flex-flow: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    background-color: white;
+    justify-content: center;
+    border-radius: 15px;
+    width: 450px;
+    min-height: auto;
+    background-color: ghostwhite;
   }
-  
-  .current-time {
-    font-size: 2rem;
-    color: black;
-  }
-  
   .alarm-form {
+    flex-direction: row;
     justify-content: space-between;
-    flex-direction: column;
     width: 100%;
-
-  }
-  
-  .submit-button {
-    border-color: black;
-    border: 10px;
-    border-radius: 0.5rem;
-    font-weight: bold;
-  }
-  
-  .set-alarm-container {
-    width: 100%;
-    background-color: aliceblue;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 1rem;
-  }
-  
-  .set-alarm-container .set-alarm-container-title {
-    color: black;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  
-  .alarm {
-    justify-content: space-between;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    align-items: center;
-    background-color: #ddecf9;
-  
-  }
-  .alarm .delete-alarm {
-    border-radius: 0.5rem;
-    background-color: #f14949ea;
-    font-weight: bold;
-    color: wheat;
-    font-size:xx-medium;
-  }
-  
-  .delete-alarm:hover{
-    background-color: red;
-    color: white;
-  }
-  .time {
-    color: #0E141B;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  .submit-button:hover {
-    background-color: #ddecf9;
-  }
-  
-  .page-title{
-    background-color: white;
-    align-items: center;
-    text-align: center;
-    color: black;
-    
   }
 
-  
-  /* style of devices of screen size less than 768px */
-  @media only screen and (min-width: 600px) {
-    /* adding padding to container */
-    .main-container {
-      padding-block: 2rem;
-    }
-    .clock-container{
-        justify-content: center;
-        border-radius: 15px;
-        width: 450px;
-        min-height: auto;
-    }
-    .alarm-form {
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-  
-    }
-
-    .mcenter{
-      margin: 0;
-    }
+  .mcenter {
+    margin: 0;
   }
+}
