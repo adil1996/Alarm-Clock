@@ -9,7 +9,6 @@ const setalarmContainer = document.querySelector(".set-alarm-container");
 
 // Adding Hours, Minutes, Seconds in DropDown Menu
 window.addEventListener("DOMContentLoaded", (event) => {
-  debugger
   document.getElementById('set-alarm-container').style.display  = "none";
   dropDownMenu(1, 12, setHours);
  
@@ -26,7 +25,6 @@ setAlarmButton.addEventListener("click", getInput);
 
 
 function dropDownMenu(start, end, element) {
-  debugger
   for (let i = start; i <= end; i++) {
     const dropDown = document.createElement("option");
     dropDown.value = i < 10 ? "0" + i : i;
@@ -37,7 +35,6 @@ function dropDownMenu(start, end, element) {
 
 
 function getCurrentTime() {
-  debugger
   let time = new Date();
   time = time.toLocaleTimeString("en-US", {
     hour: "numeric",
@@ -52,7 +49,6 @@ function getCurrentTime() {
 
 
 function getInput(e) {
-  debugger
   e.preventDefault();
   const hourValue = setHours.value;
   const minuteValue = setMinutes.value;
@@ -76,7 +72,6 @@ function convertToTime(hour, minute, second, amPm) {
 
 
 function setAlarm(time, fetching = false) {
-  debugger
   const alarm = setInterval(() => {
     if (time === getCurrentTime()) {
       alert("Alarm Ringing");
@@ -92,7 +87,6 @@ function setAlarm(time, fetching = false) {
 
 // Alarms set by user Dislayed in HTML
 function addAlaramToDom(time, intervalId) {
-  debugger
   const alarm = document.createElement("div");
   alarm.classList.add("alarm", "mb", "d-flex");
   alarm.innerHTML = `
@@ -107,7 +101,6 @@ function addAlaramToDom(time, intervalId) {
 
 // Is alarms saved in Local Storage?
 function checkAlarams() {
-  debugger
   let alarms = [];
   const isPresent = localStorage.getItem("alarms");
   if (isPresent) {
@@ -121,7 +114,6 @@ function checkAlarams() {
 
 // save alarm to local storage
 function saveAlarm(time) {
-  debugger
   const alarms = checkAlarams();
   alarms.push(time);
   localStorage.setItem("alarms", JSON.stringify(alarms));
@@ -145,7 +137,6 @@ function fetchAlarm() {
 
 
 function deleteAlarm(event, time, intervalId) {
-  debugger
   const self = event.target;
 
   clearInterval(intervalId);
@@ -158,7 +149,6 @@ function deleteAlarm(event, time, intervalId) {
 }
 
 function deleteAlarmFromLocal(time) {
-  debugger
   const alarms = checkAlarams();
 
   const index = alarms.indexOf(time);
