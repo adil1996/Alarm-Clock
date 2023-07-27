@@ -71,10 +71,17 @@ function convertToTime(hour, minute, second, amPm) {
 }
 
 
+function alarmAlert(time) {
+  alert('Ringing Alarm : '+time);
+}
+
 function setAlarm(time, fetching = false) {
   const alarm = setInterval(() => {
     if (time === getCurrentTime()) {
-      alert("Alarm Ringing");
+      document.getElementById("ringtone").play();
+      setTimeout(alarmAlert(time),3000);
+      document.getElementById("ringtone").pause();
+      document.getElementById("ringtone").currentTime = 0;
     }
     console.log("running");
   }, 500);
